@@ -93,7 +93,7 @@ async function onConversation() {
     +uuid,
     {
       dateTime: new Date().toLocaleString(),
-      text: '思考中',
+      text: '',
       loading: true,
       inversion: false,
       error: false,
@@ -479,9 +479,18 @@ onUnmounted(() => {
           :class="[isMobile ? 'p-2' : 'p-4']"
         >
           <template v-if="!dataSources.length">
-            <div class="flex items-center justify-center mt-4 text-center text-neutral-300">
-              <SvgIcon icon="ri:bubble-chart-fill" class="mr-2 text-3xl" />
-              <span>Aha~</span>
+	    <div style="text-align:center;">
+              <b style="color:red;">二维码是自愿捐赠！就算不捐，也可以用！网站成本大概平均每人每月5元，只需每月捐5元 网站就能活下去</b>
+            </div>
+            <div style="text-align:center;">PS: 所有捐赠都将用于服务器维护和API费用支付</div>
+	    <div style="text-align:center;">国外服务器,访问速度较慢,敬请谅解</div>
+	    <div style="text-align:center;">域名可能会被DNS污染,且用且珍惜</div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+            ">
+              <img src="./001.jpg" width="200" height="100" alt="">
             </div>
           </template>
           <template v-else>
